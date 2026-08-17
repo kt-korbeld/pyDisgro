@@ -1,10 +1,10 @@
 # pyDisgro
-A numpy-only Python port of [DiSGro](https://doi.org/10.1371/journal.pcbi.1003539)
-(Tang, Zhang & Liang, *PLoS Computational Biology* 2014) — distance-guided
-sequential chain-growth Monte Carlo for reconstructing missing protein loops.
+pyDisgro is a numpy-only Python port of [DiSGro](https://github.com/aa14k/Disgro/tree/master), a fast protein loop sampling and structure prediction tool.
+(Tang, Zhang & Liang, *PLoS Computational Biology* 2014) — distance-guided sequential chain-growth Monte Carlo for reconstructing missing protein loops
+([link](https://doi.org/10.1371/journal.pcbi.1003539)).
 
 ## Installation
-pyDisgro is a minimal port that only requires Python 3.9+ and numpy. It can be installed using:
+pyDisgro requires Python 3.9+ and numpy. It can be installed using:
 ```
 pip install pydisgro
 ```
@@ -17,7 +17,7 @@ Where `-f` or `--protfile` specifies the input PDB, `-s` or `--start` and `-e` o
 
 Note that the numbering for the `--start` and `--end` input parameters are different from the original C++ Disgro application, where a 0-indexed residue index rather than the PDB residue numbers were used.
 
-The following advanced settings are available, which correspond to the original DisGro flags. In most cases, these do not have to be adapted. A complete overview of the flags can also be accessed using `-h+` or `--advanced-help`. 
+The following advanced settings are available, which correspond to the original DisGro flags. In most cases, these do not have to be adjusted and can be ignored. A complete overview of the flags can also be accessed using `-h+` or `--advanced-help`. 
 ```
 --protfile      input protein coordinate file (.pdb)
 --start         PDB residue number of the N-terminal loop anchor
