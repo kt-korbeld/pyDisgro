@@ -12,8 +12,14 @@ dependencies = [
     "numpy",
 ]
 
-[project.scripts]
-pydisgro = "pydisgro.main:main"
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+pydisgro = ["data/*"]
 
 [tool.setuptools.packages.find]
 include = ["pydisgro*"]
+
+[project.scripts]
+pydisgro = "pydisgro.cli:main"

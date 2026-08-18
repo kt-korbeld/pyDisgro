@@ -2,6 +2,8 @@
 pyDisgro is a numpy-only Python port of [DiSGro](https://github.com/aa14k/Disgro/tree/master), a fast protein loop sampling and structure prediction tool.
 (Tang, Zhang & Liang, *PLoS Computational Biology* 2014) — distance-guided sequential chain-growth Monte Carlo for reconstructing missing protein loops
 ([link](https://doi.org/10.1371/journal.pcbi.1003539)).
+The port to python allows for compatibility  with other python-based biomolecular pipelines, at the cost of a slowdown compared to the C++ version.
+Short loops (5-8 residues) usually take around 10s on a single CPU. Longer loops (around 15-20 residues) will take around 2 mins.
 
 ## Installation
 pyDisgro requires Python 3.9+ and numpy. It can be installed using:

@@ -2,19 +2,22 @@
 
 import math
 import os
+from importlib.resources import files, as_file
 
 # ---------------------------------------------------------------------------
 # data files
 # ---------------------------------------------------------------------------
 
 # Directory holding the parameter files shipped with DiSGro.  
-DATA_DIR = os.environ.get("DISGRO_DATA", "data")
+#DATA_DIR = os.environ.get("DISGRO_DATA", "data")
+DATA_DIR = files("pydisgro")/"data"
+
 
 def data_path(name):
     """
     Resolve name against the DiSGro data directory.
     """
-    return os.path.join(DATA_DIR, name)
+    return str((DATA_DIR.joinpath(name)))
 
 FILE_ATOMPROP = "atomProp2.txt"        # atom/residue force-field parameters
 FILE_SCTORSION2 = "SCT_PF.txt"         # side-chain torsion angle library
