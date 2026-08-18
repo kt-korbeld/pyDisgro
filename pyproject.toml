@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydisgro"
+version = "0.1.0"
+description = "python port of Disgro"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+]
+
+[project.scripts]
+pydisgro = "pydisgro.main:main"
+
+[tool.setuptools.packages.find]
+include = ["pydisgro*"]
